@@ -1,13 +1,19 @@
 <template>
-  <div></div>
+  <div>{{ squirrels }}</div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 const squirrels = ref('')
 async function getSquirrels() {
-  let res = await fetch()
+  let res = await fetch(
+    'https://data.cityofnewyork.us/resource/vfnx-vebw.json?$select=highlight_fur_color,above_ground_sighter'
+  )
+  let data = await res.json()
+  console.log(data)
+  squirrels.value = data
 }
+getSquirrels()
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
