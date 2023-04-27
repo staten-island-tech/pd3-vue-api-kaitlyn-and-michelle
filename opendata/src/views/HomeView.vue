@@ -11,13 +11,13 @@ async function getSquirrels() {
     {
       method: 'GET',
       headers: {
-        'X-AppToken': 'L97vo28lyzPVrGAECkG5sfwe'
+        // 'X-AppToken': 'L97vo28lyzPVrGAECkG5sfwe'
       }
     }
   )
   let data = await res.json()
   console.log(data)
-  squirrels.value = await data
+  squirrels.value = data
 }
 getSquirrels()
 </script>
