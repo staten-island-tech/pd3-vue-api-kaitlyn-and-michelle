@@ -17,7 +17,7 @@ async function getSquirrels() {
   )
   let data = await res.json()
   console.log(data)
-  squirrels.value = data
+  squirrels.value = await data
 }
 getSquirrels()
 </script>
