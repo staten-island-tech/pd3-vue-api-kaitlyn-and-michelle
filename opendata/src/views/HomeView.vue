@@ -2,7 +2,7 @@
   <h1>Compilation of Squirrel Data in Central Park</h1>
   <h2>Squirrel Age</h2>
   <div class="container">
-    <Pie v-if="loaded" :data="chartData" :options="chartOptions" />
+    <Pie id = "pie-chart" style="width: 300px; height: 300px;" v-if="loaded" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
@@ -71,4 +71,9 @@ onMounted(async () => {
 * {
   font-family: 'Darumadrop One', cursive;
 }
+
+/* canvas {
+  max-height: 280px;
+  max-width: 520px;
+} */
 </style>
