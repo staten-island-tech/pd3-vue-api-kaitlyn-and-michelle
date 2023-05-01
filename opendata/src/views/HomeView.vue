@@ -1,4 +1,6 @@
 <template>
+  <h1>Compilation of Squirrel Data in Central Park</h1>
+  <h2>Squirrel Age</h2>
   <div class="container">
     <Pie v-if="loaded" :data="chartData" :options="chartOptions" />
   </div>
@@ -55,7 +57,7 @@ onMounted(async () => {
     const adult = squirrels.value.filter((entry) => entry.age === 'Adult')
     const juvenile = squirrels.value.filter((entry) => entry.age === 'Juvenile')
 
-    chartData.value.datasets[0].data.push(adult, juvenile)
+    chartData.value.datasets[0].data.push(adult.length, juvenile.length)
 
     loaded.value = true
   } catch (e) {
