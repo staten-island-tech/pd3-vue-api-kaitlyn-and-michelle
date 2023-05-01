@@ -1,5 +1,5 @@
 <template>
-  <div>{{ squirrels }}</div>
+  <div></div>
 </template>
 
 <script setup>
@@ -19,7 +19,7 @@ async function getSquirrels() {
   console.log(data)
   squirrels.value = data
 }
-// getSquirrels()
+getSquirrels()
 </script>
 
 <style scoped></style>
