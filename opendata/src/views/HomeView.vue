@@ -7,19 +7,13 @@ import { ref, onMounted } from 'vue'
 const squirrels = ref('')
 async function getSquirrels() {
   let res = await fetch(
-    'https://data.cityofnewyork.us/resource/vfnx-vebw.json?$select=highlight_fur_color,above_ground_sighter',
-    {
-      method: 'GET',
-      headers: {
-        // 'X-AppToken': 'L97vo28lyzPVrGAECkG5sfwe'
-      }
-    }
+    'https://data.cityofnewyork.us/resource/vfnx-vebw.json?$select=location,highlight_fur_color,age'
   )
   let data = await res.json()
   console.log(data)
   squirrels.value = data
 }
-// getSquirrels()
+getSquirrels()
 </script>
 
 <style scoped></style>
