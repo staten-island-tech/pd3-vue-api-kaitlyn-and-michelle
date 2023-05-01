@@ -1,4 +1,5 @@
 <template>
+  <h1>Squirrel Colors</h1>
   <div class="container">
     <Bar v-if="loaded" :data="chartData" :options="chartOptions" />
   </div>
@@ -66,4 +67,9 @@ onMounted(async () => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+* {
+  font-family: 'Darumadrop One', cursive;
+}
+</style>

@@ -1,4 +1,5 @@
 <template>
+  <h1>Location of Squirrels</h1>
   <div class="container">
     <Doughnut v-if="loaded" :data="chartData" :options="chartOptions" />
   </div>
@@ -38,7 +39,7 @@ const chartData = ref({
     {
       label: 'Squirrel Height',
       data: [],
-      backgroundColor: ['#825d4a', '#000000'],
+      backgroundColor: ['#b4d2fa', '#bef7d4'],
       borderWidth: 2.5
     }
   ]
@@ -46,7 +47,7 @@ const chartData = ref({
 const chartOptions = ref({
   responsive: true,
   maintainAspectRatio: true,
-  backgroundColor: ['#825d4a', '#ffffff'],
+  backgroundColor: ['#b4d2fa', '#bef7d4'],
   borderWidth: 2.5
 })
 onMounted(async () => {
@@ -64,4 +65,9 @@ onMounted(async () => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+* {
+  font-family: 'Darumadrop One', cursive;
+}
+</style>
