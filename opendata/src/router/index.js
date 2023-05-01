@@ -10,6 +10,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+
     {
       path: '/chart1',
       name: 'Chart1',
